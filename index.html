@@ -20,14 +20,16 @@
       min-height: 100vh;
       text-align: center;
       color: #1a1a1a;
+      padding: 20px;
+      box-sizing: border-box;
     }
     .card {
       background: #fff;
       padding: 40px 25px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      max-width: 400px;
-      width: 90%;
+      max-width: 420px;
+      width: 100%;
     }
     h1 { font-size: 22px; margin: 0 0 10px; }
     p { color: #555; font-size: 15px; line-height: 1.5; }
@@ -43,17 +45,73 @@
       font-weight: 600;
     }
     .btn:hover { background: #0052cc; }
-    .hint { margin-top: 20px; font-size: 13px; color: #888; }
+    .qr {
+      margin-top: 25px;
+    }
+    .qr img {
+      width: 180px;
+      height: 180px;
+      border-radius: 10px;
+      border: 1px solid #eee;
+    }
+    .hint { margin-top: 12px; font-size: 13px; color: #888; }
+    .share {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+    .share-title {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .share a {
+      display: inline-block;
+      margin: 4px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .tg { background: #229ED9; }
+    .vk { background: #0077FF; }
+    .wa { background: #25D366; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>🚗 Попутчики Совгавань — Ванино</h1>
     <p>Группа для поиска попутчиков и совместных поездок в мессенджере <b>MAX</b>.</p>
-    <a class="btn" href="https://max.ru/join/KbHsNxkyjsvBHzsjIwVWVX4mlDK3RU_7r2kfgAtZJqk" target="_blank" rel="noopener">
+
+    <a class="btn"
+       href="https://max.ru/join/KbHsNxkyjsvBHzsjIwVWVX4mlDK3RU_7r2kfgAtZJqk"
+       target="_blank" rel="noopener">
       Присоединиться к чату
     </a>
-    <p class="hint">Если у вас установлен MAX — откроется приложение.<br>Если нет — ссылка откроется в браузере.</p>
+
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fmax.ru%2Fjoin%2FKbHsNxkyjsvBHzsjIwVWVX4mlDK3RU_7r2kfgAtZJqk"
+           alt="QR-код для вступления в группу">
+      <p class="hint">Наведите камеру телефона, чтобы вступить</p>
+    </div>
+
+    <div class="share">
+      <div class="share-title">Поделиться с друзьями:</div>
+
+      <a class="tg"
+         href="https://t.me/share/url?url=https%3A%2F%2Fmax.ru%2Fjoin%2FKbHsNxkyjsvBHzsjIwVWVX4mlDK3RU_7r2kfgAtZJqk&text=Попутчики%20Совгавань%20—%20Ванино%20в%20MAX"
+         target="_blank" rel="noopener">Telegram</a>
+
+      <a class="vk"
+         href="https://vk.com/share.php?url=https%3A%2F%2Fmax.ru%2Fjoin%2FKbHsNxkyjsvBHzsjIwVWVX4mlDK3RU_7r2kfgAtZJqk&title=Попутчики%20Совгавань%20—%20Ванино"
+         target="_blank" rel="noopener">ВКонтакте</a>
+
+      <a class="wa"
+         href="https://wa.me/?text=Попутчики%20Совгавань%20—%20Ванино%20в%20MAX%3A%20https%3A%2F%2Fmax.ru%2Fjoin%2FKbHsNxkyjsvBHzsjIwVWVX4mlDK3RU_7r2kfgAtZJqk"
+         target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </div>
 </body>
 </html>
